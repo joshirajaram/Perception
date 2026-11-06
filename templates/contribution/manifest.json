@@ -1,0 +1,15 @@
+{
+  "name": "example-contribution",
+  "displayName": "Contribution template",
+  "description": "Starter metadata only; replace before submitting runnable content.",
+  "category": "workflows",
+  "entryPoint": "README.md",
+  "inputs": [
+    {
+      "name": "targetUrl",
+      "description": "Example input only; replace with the contribution's actual inputs.",
+      "type": "string",
+      "required": true
+    }
+  ]
+}

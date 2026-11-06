@@ -1,0 +1,4 @@
+# Assign actual GitHub maintainer accounts or teams.
+# Example rule shape: /workflows/ @organization/workflow-maintainers
+# Configure branch protection to require code owner approval.
+# No owners are assigned by this draft file.
