@@ -1,14 +1,34 @@
-# Project
+# Perception Community
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+Welcome to the Perception Repository!
 
-As the maintainer of this project, please make a few updates:
+Perception is a new multi-agent security system designed for the realities of AI. Perception brings together signals, context,
+models, and specialized agents into a continuously learning system of defense. It can reason, prioritize, and act at machine speed
+while keeping humans firmly in control and empowering them with powerful new workflows.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+- [Perpcetion documentation](https://learn.microsoft.com/en-us/security/agentic-security/)
+
+Customers, partners, and Microsoft contributors can use this repository to discover,
+contribute, and deploy extensions in their own environments. Community content is
+separate from the Perception product; this repository does not contain its service
+implementation.
+
+## Explore the repository
+
+| Directory | Purpose |
+| --- | --- |
+| [workflows](workflows/README.md) | End-to-end processes using Perception, including Logic Apps |
+| [connectors](connectors/README.md) | Reusable adapters and plugins connecting Perception to other systems |
+| [scripts](scripts/README.md) | Standalone API-driven utilities |
+| [contribution template](templates/contribution/README.md) | A starting point for documenting and packaging contributions |
+
+These categories describe functionality, not whether a contributor is Microsoft,
+a customer, or a partner.
+
+The repository currently contains the initial scaffold and contribution guidance,
+not runnable scenarios. Start with [getting started](docs/getting-started.md) and
+[CONTRIBUTING.md](CONTRIBUTING.md). Contributions are validated and reviewed before
+publication.
 
 ## Contributing
 
