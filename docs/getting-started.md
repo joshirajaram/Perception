@@ -12,6 +12,7 @@ does not include service implementation code or a standalone SDK.
 | Directory | Content |
 | --- | --- |
 | [API](../API/README.md) | API collections and hands-on guides for humans and agents |
+| [HTTP examples](examples/README.md) | Language-neutral Microsoft Graph request recipes |
 | [workflows](../workflows/README.md) | End-to-end processes using Perception, including Logic Apps |
 | [scripts](../scripts/README.md) | Standalone API-driven utilities |
 | [dashboards](../dashboards/README.md) | Workbooks, queries, and visualizations |
