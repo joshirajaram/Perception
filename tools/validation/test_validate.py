@@ -42,8 +42,8 @@ class ValidationTests(unittest.TestCase):
     def test_valid_package(self):
         self.assertEqual(validate_package(self.package, "scripts"), [])
 
-    def test_workflow_and_connector_packages(self):
-        for category in ("workflows", "connectors"):
+    def test_workflow_connector_and_api_packages(self):
+        for category in ("workflows", "connectors", "API"):
             with self.subTest(category=category):
                 package = self.root / category / "example-script"
                 package.mkdir(parents=True)
@@ -57,6 +57,28 @@ class ValidationTests(unittest.TestCase):
                     encoding="utf-8",
                 )
                 self.assertEqual(validate_package(package, category), [])
+
+    def test_only_api_folder_names_can_preserve_product_casing(self):
+        for category in ("API", "scripts"):
+            with self.subTest(category=category):
+                package = self.root / category / "Insomnia-collection"
+                package.mkdir()
+                for filename in ("README.md", "run.py"):
+                    (package / filename).write_text(
+                        (self.package / filename).read_text(encoding="utf-8"),
+                        encoding="utf-8",
+                    )
+                (package / "manifest.json").write_text(
+                    json.dumps(dict(
+                        self.manifest, name="insomnia-collection", category=category
+                    )),
+                    encoding="utf-8",
+                )
+                errors = validate_package(package, category)
+                if category == "API":
+                    self.assertEqual(errors, [])
+                else:
+                    self.assertEqual(errors, ["name must match the contribution folder"])
 
     def test_missing_readme_or_manifest_is_rejected(self):
         for filename in ("README.md", "manifest.json"):
@@ -118,6 +140,11 @@ class ValidationTests(unittest.TestCase):
         (self.root / "scripts" / "undocumented").mkdir()
         errors = validate_repository(self.root)
         self.assertTrue(any("undocumented" in error for error in errors))
+
+    def test_repository_checks_api_packages(self):
+        (self.root / "API" / "undocumented-api").mkdir()
+        errors = validate_repository(self.root)
+        self.assertTrue(any("undocumented-api" in error for error in errors))
 
 
 if __name__ == "__main__":
