@@ -17,6 +17,7 @@ implementation.
 
 | Directory | Purpose |
 | --- | --- |
+| [API](API/README.md) | API collections and hands-on guides for humans and agents |
 | [workflows](workflows/README.md) | End-to-end processes using Perception, including Logic Apps |
 | [connectors](connectors/README.md) | Reusable adapters and plugins connecting Perception to other systems |
 | [scripts](scripts/README.md) | Standalone API-driven utilities |
@@ -25,8 +26,8 @@ implementation.
 These categories describe functionality, not whether a contributor is Microsoft,
 a customer, or a partner.
 
-The repository currently contains the initial scaffold and contribution guidance,
-not runnable scenarios. Start with [getting started](docs/getting-started.md) and
+Start with the [Microsoft Graph Insomnia collection](API/Insomnia-collection/README.md),
+[getting started](docs/getting-started.md), and
 [CONTRIBUTING.md](CONTRIBUTING.md). Contributions are validated and reviewed before
 publication.
 

@@ -1,0 +1,63 @@
+{
+  "name": "insomnia-collection",
+  "displayName": "Perception in Microsoft Graph - Insomnia",
+  "description": "Public Graph beta requests with private local variables and a human/agent walkthrough.",
+  "category": "API",
+  "entryPoint": "perception-graph.insomnia.json",
+  "inputs": [
+    {
+      "name": "access_token",
+      "description": "Required Microsoft Graph delegated token; set only in the private local Insomnia environment.",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "playbook_definition_id",
+      "description": "Catalog GUID required for getting a definition or creating a session; never use uniqueName as the ID.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "session_id",
+      "description": "Returned session GUID required for session-specific reads or cancellation.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "input_id",
+      "description": "Opaque input ID returned for the selected session; required only for Get input.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "output_id",
+      "description": "Opaque output ID returned for the selected session; required for metadata or content reads.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "agent_run_id",
+      "description": "Run ID returned for the selected session; required only for Get agent run.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "input_kind",
+      "description": "Input kind accepted by the selected definition; required for the one-input creation example.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "input_value",
+      "description": "Authorized input identifier as a string; required for the one-input creation example.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "write_access_token",
+      "description": "Optional delegated Graph token with Perception.Manage.All; leave empty for reads and set privately only for explicitly approved writes.",
+      "type": "string",
+      "required": false
+    }
+  ]
+}

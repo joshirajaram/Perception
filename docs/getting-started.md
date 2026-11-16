@@ -4,14 +4,14 @@ This repository provides a home for community-built integrations and extensions
 using Perception. Customers, partners, and Microsoft contributors can propose
 content for others to review, deploy, and use in their own environments.
 
-Community contributions are separate from the Perception product. This scaffold
-does not include service implementation code, a standalone SDK, or runnable
-scenarios yet.
+Community contributions are separate from the Perception product. This repository
+does not include service implementation code or a standalone SDK.
 
 ## Browse content
 
 | Directory | Content |
 | --- | --- |
+| [API](../API/README.md) | API collections and hands-on guides for humans and agents |
 | [workflows](../workflows/README.md) | End-to-end processes using Perception, including Logic Apps |
 | [scripts](../scripts/README.md) | Standalone API-driven utilities |
 | [dashboards](../dashboards/README.md) | Workbooks, queries, and visualizations |
@@ -21,8 +21,6 @@ Categories describe functionality, not contributor ownership; both Microsoft and
 customer/partner contributions can belong in any category.
 
 ## Use a contribution
-
-Once content is available:
 
 1. Browse the categories and read the selected contribution's README.
 2. Review permissions, dependencies, costs, and expected resource changes.

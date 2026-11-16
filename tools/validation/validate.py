@@ -6,7 +6,7 @@ import re
 from pathlib import Path, PureWindowsPath
 
 
-CATEGORIES = ("workflows", "scripts", "dashboards", "connectors")
+CATEGORIES = ("workflows", "scripts", "dashboards", "connectors", "API")
 INPUT_TYPES = ("string", "integer", "number", "boolean")
 
 
@@ -50,8 +50,10 @@ def validate_package(package, category=None):
     if nonempty_string(name):
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
             errors.append("name must be lowercase and hyphen-separated")
-        if category is not None and name != package.name:
-            errors.append("name must match the contribution folder")
+        if category is not None:
+            folder_name = package.name.lower() if category == "API" else package.name
+            if name != folder_name:
+                errors.append("name must match the contribution folder")
     if data.get("category") not in CATEGORIES:
         errors.append(f"category must be one of {', '.join(CATEGORIES)}")
     elif category is not None and data["category"] != category:

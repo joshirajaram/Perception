@@ -11,7 +11,9 @@ License Agreement process described in [README.md](README.md), and the
 
 1. Fork the repository and create a branch for one contribution.
 2. Copy `templates\contribution` into the appropriate content category using a
-   descriptive lowercase, hyphen-separated folder name.
+   descriptive hyphen-separated folder name. Use lowercase except under `API`,
+   where product casing is allowed, such as `API\Insomnia-collection`. Keep the
+   manifest's `name` lowercase.
 3. Replace the template README and manifest with accurate documentation and
    metadata. Include the actual source or deployment artifacts.
 4. Include sanitized examples and focused tests where applicable. Do not include
