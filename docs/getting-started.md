@@ -9,10 +9,13 @@ does not include service implementation code or a standalone SDK.
 
 ## Browse content
 
+Choose a collection or scenario below. For an end-to-end API walkthrough, see
+[Use Perception in Microsoft Graph](https://learn.microsoft.com/en-us/graph/api/resources/agenticsecurity-apioverview?view=graph-rest-beta).
+
 | Directory | Content |
 | --- | --- |
 | [API](../API/README.md) | API collections and hands-on guides for humans and agents |
-| [HTTP examples](examples/README.md) | Language-neutral Microsoft Graph request recipes |
+| [Perception API examples](examples/README.md) | Language-neutral Microsoft Graph request recipes |
 | [workflows](../workflows/README.md) | End-to-end processes using Perception, including Logic Apps |
 | [scripts](../scripts/README.md) | Standalone API-driven utilities |
 | [dashboards](../dashboards/README.md) | Workbooks, queries, and visualizations |

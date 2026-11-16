@@ -4,11 +4,13 @@ Discover outputs for an existing session, then retrieve their authenticated
 content. Complete the [common setup](README.md#setup-and-notation) and obtain a
 session ID from [session discovery](filter-sessions.md) or
 [playbook creation](start-playbook.md). These requests are read-only.
+Use delegated `Perception.Read.All` (or `Perception.Manage.All`).
+See [List outputs](https://learn.microsoft.com/en-us/graph/api/investigationsession-list-outputs?view=graph-rest-beta).
 
 ## 1. List session outputs
 
 ```http
-GET {graphBaseUrl}/sessions('<session-id>')/outputs?$select=id,kind
+GET {graphBaseUrl}/sessions/<session-id>/outputs
 Authorization: Bearer <access-token>
 Accept: application/json
 ```
@@ -31,6 +33,7 @@ Illustrative response excerpt:
 ```
 
 Follow any `@odata.nextLink` before assuming all outputs have been discovered.
+Use `?$select=id` if you only need identifiers.
 Choose an ID from the selected session's response; do not construct one from a
 filename or use an ID belonging to another session.
 
@@ -45,7 +48,7 @@ output collection.
 ## 2. Read one output's metadata
 
 ```http
-GET {graphBaseUrl}/sessions('<session-id>')/outputs('<output-id>')?$select=id,kind
+GET {graphBaseUrl}/sessions/<session-id>/outputs/<output-id>
 Authorization: Bearer <access-token>
 Accept: application/json
 ```
@@ -62,11 +65,12 @@ Illustrative response excerpt:
 Expect `200 OK` and the selected output identity. Do not assume direct-service
 properties such as `path`, `downloadUrl`, or `type` are exposed by Graph; this
 recipe uses Graph's `kind` and authenticated content navigation.
+See [Get output](https://learn.microsoft.com/en-us/graph/api/investigationoutput-get?view=graph-rest-beta).
 
 ## 3. Download the content
 
 ```http
-GET {graphBaseUrl}/sessions('<session-id>')/outputs('<output-id>')/content
+GET {graphBaseUrl}/sessions/<session-id>/outputs/<output-id>/content
 Authorization: Bearer <access-token>
 Accept: */*
 ```
@@ -78,6 +82,7 @@ Markdown, HTML, or PDF. An error response can still be a Graph JSON error.
 
 The content operation requires authentication just like the metadata read.
 An output ID is not a public download credential.
+See [Get output content](https://learn.microsoft.com/en-us/graph/api/investigationoutput-get-content?view=graph-rest-beta).
 
 ## Empty results and output readiness
 
