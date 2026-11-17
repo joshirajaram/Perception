@@ -15,7 +15,7 @@ Choose a collection or scenario below. For an end-to-end API walkthrough, see
 | Directory | Content |
 | --- | --- |
 | [API](../API/README.md) | API collections and hands-on guides for humans and agents |
-| [Perception API examples](examples/README.md) | Language-neutral Microsoft Graph request recipes |
+| [Perception API examples](../API/HTTP/Examples/README.md) | Language-neutral Microsoft Graph request recipes |
 | [workflows](../workflows/README.md) | End-to-end processes using Perception, including Logic Apps |
 | [scripts](../scripts/README.md) | Standalone API-driven utilities |
 | [dashboards](../dashboards/README.md) | Workbooks, queries, and visualizations |

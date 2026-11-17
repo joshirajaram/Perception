@@ -22,7 +22,7 @@ implementation.
 | [workflows](workflows/README.md) | End-to-end processes using Perception, including Logic Apps |
 | [connectors](connectors/README.md) | Reusable adapters and plugins connecting Perception to other systems |
 | [scripts](scripts/README.md) | Standalone API-driven utilities |
-| [Perception API examples](docs/examples/README.md) | Microsoft Graph recipes for session filtering, reports, and starting playbooks |
+| [Perception API examples](API/HTTP/Examples/README.md) | Microsoft Graph recipes for session filtering, reports, and starting playbooks |
 | [contribution template](templates/contribution/README.md) | A starting point for documenting and packaging contributions |
 
 These categories describe functionality, not whether a contributor is Microsoft,

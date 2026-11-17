@@ -20,7 +20,7 @@ Choose a scenario to view language-neutral HTTP requests and sample responses:
 
 ## Setup and notation
 
-Complete the [shared authentication setup](../authentication.md#graph-request-examples)
+Complete the [shared authentication setup](../../../docs/authentication.md#graph-request-examples)
 before sending requests. Read-only recipes use delegated `Perception.Read.All`;
 creating or canceling sessions requires `Perception.Manage.All`, which also
 permits reads. The optional `/me` lookup requires delegated `User.Read`.

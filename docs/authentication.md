@@ -3,7 +3,7 @@
 ## Microsoft Graph: delegated access
 
 The [Graph Insomnia sample](../API/Insomnia-collection/README.md) and
-[Perception API examples](examples/README.md) call
+[Perception API examples](../API/HTTP/Examples/README.md) call
 `https://graph.microsoft.com/beta/security/agenticSecurity`.
 They demonstrate delegated access with a work or school account, not a
 client-credentials or unattended sign-in flow. Personal Microsoft accounts
@@ -90,13 +90,13 @@ mechanism documented for the specific contribution, requesting only required acc
 ## Graph request examples
 
 Complete the [delegated setup above](#microsoft-graph-delegated-access) before
-using the [Perception API examples](examples/README.md). Reads require
+using the [Perception API examples](../API/HTTP/Examples/README.md). Reads require
 `Perception.Read.All`; creating or canceling sessions requires
 `Perception.Manage.All`, which also permits reads. Confirm the API and selected
 playbook are enabled in your tenant.
 
 The optional `GET /v1.0/me` lookup in
-[Filter sessions](examples/filter-sessions.md) additionally requires delegated
+[Filter sessions](../API/HTTP/Examples/filter-sessions.md) additionally requires delegated
 `User.Read`. Skip it if you already know your user object ID.
 
 For the API walkthrough and permission requirements, see
